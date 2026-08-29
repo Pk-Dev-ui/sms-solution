@@ -1,0 +1,13 @@
+body { margin: 0; font-family: Arial, sans-serif; background: #ffffff; color: #1f1f1f; }
+.blueHeader { display: flex; align-items: center; gap: 12px; background: #0f4761; color: #ffffff; padding: 16px 24px; }
+.blueHeader img { height: 40px; }
+.loginShell { min-height: 100vh; display: flex; flex-direction: column; }
+.loginCard { width: 420px; margin: 72px auto; padding: 24px; border: 1px solid #d9d9d9; border-radius: 12px; box-shadow: 0 4px 18px rgba(0,0,0,.12); display: flex; flex-direction: column; gap: 12px; }
+.loginCard input, .editPanel input, .editPanel textarea, .editPanel select { padding: 8px; border: 1px solid #bfbfbf; border-radius: 6px; }
+.loginCard button, .editPanel button, .dashboard button { background: #0f4761; color: white; border: none; border-radius: 6px; padding: 8px 12px; margin: 4px; cursor: pointer; }
+.checkRow { display: flex; align-items: center; gap: 8px; }
+.mfaNote { font-size: 0.9rem; color: #595959; }
+.dashboard { padding: 24px; }
+.dashboard table { width: 100%; border-collapse: collapse; }
+.dashboard th, .dashboard td { border: 1px solid #d9d9d9; padding: 8px; }
+.editPanel { margin-top: 20px; padding: 16px; border: 1px solid #d9d9d9; border-radius: 8px; display: grid; gap: 10px; max-width: 560px; }
