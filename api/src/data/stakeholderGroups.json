@@ -1,0 +1,10 @@
+[
+  {
+    "group": "QA",
+    "email": "qa-team@example.com"
+  },
+  {
+    "group": "Dev",
+    "email": "dev-team@example.com"
+  }
+]
