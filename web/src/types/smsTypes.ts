@@ -1,0 +1,1 @@
+export interface SmsTask { TaskID: string; TaskName: string; StartDate?: string; FinishDate?: string; Duration?: string | number; PercentComplete?: number; Resource?: string; Notes?: string; RiskIssue?: 'None' | 'Risk' | 'Issue'; Status?: string; LastUpdatedBy?: string; LastUpdatedDate?: string; }
