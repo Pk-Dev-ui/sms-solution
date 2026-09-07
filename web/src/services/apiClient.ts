@@ -43,9 +43,21 @@ export async function getStakeholders() {
   return res.json();
 }
 
-export async function sendManualReminder(id: string) {
-  const res = await fetch(`${API_BASE}/api/reminder/${id}`, { method: "POST" });
-  if (!res.ok) throw new Error(`Failed to send reminder for ${id}`);
+export async function sendManualReminder(instance: any, account: any, taskId: string) {
+  const token = await instance.acquireTokenSilent({
+    scopes: ["api://sms-solution/.default"],
+    account
+  });
+
+  const res = await fetch(`${import.meta.env.VITE_API_BASE}/api/reminder/${taskId}`, {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${token.accessToken}`
+    }
+  });
+
+  if (!res.ok) throw new Error("Failed to send reminder");
   return res.json();
 }
+
 
