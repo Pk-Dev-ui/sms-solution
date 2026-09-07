@@ -7,7 +7,7 @@ export default function TaskEditForm({ task, instance, account, onClose }: { tas
   const set = (k: string, v: string) => setForm({ ...form, [k]: v });
 
   async function save() {
-    await updateTask(instance, account, form.TaskID, form);
+    await updateTask(form.TaskID, form);
     onClose();
   }
 
