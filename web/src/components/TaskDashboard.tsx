@@ -9,7 +9,7 @@ export default function TaskDashboard() {
   const [tasks, setTasks] = useState<any[]>([]);
   const [selected, setSelected] = useState<any | null>(null);
 
-  useEffect(() => { if (account) getTasks(instance, account).then(setTasks); }, [instance, account]);
+  useEffect(() => { if (account) getTasks().then(setTasks); }, [instance, account]);
 
   return (
     <main className="dashboard">
