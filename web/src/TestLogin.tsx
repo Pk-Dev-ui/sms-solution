@@ -8,6 +8,15 @@ export default function TestLogin() {
     instance.loginPopup(loginRequest).catch(console.error);
   };
 
+  if (account) {
+    instance.acquireTokenSilent(loginRequest).then(token => {
+      console.log("Access Token:", token.accessToken);
+    }).catch(err => {
+      console.error("Silent token error:", err);
+    });
+  }
+
+
   const logout = () => {
     instance.logoutPopup().catch(console.error);
   };
