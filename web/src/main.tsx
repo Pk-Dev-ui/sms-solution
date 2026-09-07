@@ -8,9 +8,6 @@ import "./styles.css";
 
 const msalInstance = new PublicClientApplication(msalConfig);
 
-// Guarantee account is never undefined
-const activeAccount = msalInstance.getActiveAccount() ?? null;
-
 msalInstance.addEventCallback((event) => {
   if (
     event.eventType === EventType.LOGIN_SUCCESS &&
@@ -24,7 +21,7 @@ msalInstance.addEventCallback((event) => {
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <MsalProvider instance={msalInstance}>
-      <App instance={msalInstance} account={activeAccount} />
+      <App />
     </MsalProvider>
   </React.StrictMode>
 );
