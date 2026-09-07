@@ -42,3 +42,10 @@ export async function getStakeholders() {
   }
   return res.json();
 }
+
+export async function sendManualReminder(id: string) {
+  const res = await fetch(`${API_BASE}/api/reminder/${id}`, { method: "POST" });
+  if (!res.ok) throw new Error(`Failed to send reminder for ${id}`);
+  return res.json();
+}
+
