@@ -6,6 +6,7 @@ import { msalConfig } from "./authConfig";
 import App from "./App";
 import "./styles.css";
 
+
 const msalInstance = new PublicClientApplication(msalConfig);
 
 msalInstance.addEventCallback((event) => {
